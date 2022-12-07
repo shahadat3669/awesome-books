@@ -225,3 +225,129 @@ small,
 .main {
   margin-bottom: 88px;
 }
+
+// nav bar
+.header-section {
+  border-bottom: 1px solid $gray-4;
+  background-color: $white;
+  height: 88px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  &-hamburger {
+    display: none;
+
+    @media only screen and (max-width: 767px) {
+      display: block;
+      cursor: pointer;
+
+      &.active .navbar-hamburger-line:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.active .navbar-hamburger-line:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      &.active .navbar-hamburger-line:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  &-hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: $gray-4;
+  }
+
+  &-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+    @media only screen and (max-width: 767px) {
+      position: fixed;
+      left: -100%;
+      top: 6.9rem;
+      flex-direction: column;
+      background-color: $gray-93;
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+      transition: 0.3s;
+
+      &.active {
+        left: 0;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      &.active {
+        left: 0;
+      }
+    }
+  }
+
+  &-item {
+    margin-left: 3rem;
+    position: relative;
+
+    &-active a {
+      color: $red-48;
+
+      &::after {
+        content: '';
+        background: $red-48;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -32px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      margin: 2.5rem 0;
+    }
+  }
+
+  &-link {
+    font-size: 19px;
+    color: $gray-4;
+    position: relative;
+
+    &:hover {
+      color: $red-48;
+    }
+  }
+
+  &-logo {
+    font-size: 30px;
+    font-weight: 500;
+    color: $gray-4;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 8px;
+
+    &-img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
