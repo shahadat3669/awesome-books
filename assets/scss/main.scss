@@ -351,3 +351,54 @@ small,
     }
   }
 }
+
+// book list section
+.book-list {
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &-items {
+    border: 1px solid #ddd !important;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &-item {
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 4px;
+
+    &:nth-of-type(even) {
+      background-color: $gray-93;
+    }
+
+    & .item-text {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  & .btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &-hide span {
+    display: block;
+  }
+
+  &-hide a {
+    color: $red-48;
+    border-bottom: 1px solid $red-48;
+  }
+}
