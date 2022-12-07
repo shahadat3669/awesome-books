@@ -37,6 +37,6 @@ generateBookItems(bookCollection);
 menu();
 
 setInterval(() => {
-  document.getElementById('date').textContent =
-    DateTime.now().toFormat('LLL dd yyyy, TT');
+  const date = document.getElementById('date');
+  date.textContent = DateTime.now().toFormat('LLL dd yyyy, TT');
 }, 1000);
