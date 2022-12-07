@@ -69,6 +69,37 @@
           </div>
         </div>
       </section>
+      <!-- add book section  -->
+      <section id="addBook" class="add-book hide-section">
+        <div class="container">
+          <div class="add-book-inner">
+            <h2 class="add-book-title title-2 text-center">Add a new book</h2>
+            <form class="add-book-form form" id="addBookForm" method="post">
+              <label id="bookTitleLabel" for="bookTitle" hidden>
+                Book Title
+              </label>
+              <input
+                type="text"
+                id="bookTitle"
+                name="bookTitle"
+                placeholder="Title"
+                required
+              />
+              <label id="bookAuthorLabel" for="bookAuthor" hidden
+                >Book Author</label
+              >
+              <input
+                type="text"
+                id="bookAuthor"
+                name="bookAuthor"
+                placeholder="Author"
+                required
+              />
+              <button class="btn add-book-form-btn" type="submit">Add</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- footer section  -->
     <footer class="footer-section">
