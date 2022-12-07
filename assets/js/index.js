@@ -2,6 +2,7 @@ import BookCollection from './modules/BookCollection.js';
 import generateBookItems from './modules/GenerateBookItems.js';
 import menu from './modules/Menu.js';
 import { closeMenu, mobileMenu } from './modules/MobileMenu.js';
+import { DateTime } from './modules/luxon.js';
 
 const hamburger = document.querySelector('#navbar-hamburger');
 const navLink = document.querySelectorAll('.navbar-link');
@@ -34,3 +35,8 @@ addBookForm.addEventListener('submit', (e) => {
 
 generateBookItems(bookCollection);
 menu();
+
+setInterval(() => {
+  document.getElementById('date').textContent =
+    DateTime.now().toFormat('LLL dd yyyy, TT');
+}, 1000);
