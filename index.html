@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Books</title>
+    <!-- poppins google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <!-- header section  -->
+    <header class="header-section">
+      <div class="container">
+        <nav class="navbar">
+          <a href="/" class="navbar-logo">
+            <img
+              class="navbar-logo-img"
+              src="./assets/images/logo.png"
+              alt="logo"
+            />
+            Awesome Books</a
+          >
+          <ul class="navbar-menu">
+            <li class="navbar-item navbar-item-active">
+              <a href="#bookList" class="navbar-link" id="navBookList"
+                >Book List</a
+              >
+            </li>
+            <li class="navbar-item">
+              <a href="#addBook" class="navbar-link" id="navAddBook"
+                >Add Book</a
+              >
+            </li>
+
+            <li class="navbar-item">
+              <a href="#contact" class="navbar-link" id="navContact">Contact</a>
+            </li>
+          </ul>
+          <div id="navbar-hamburger" class="navbar-hamburger">
+            <span class="navbar-hamburger-line"></span>
+            <span class="navbar-hamburger-line"></span>
+            <span class="navbar-hamburger-line"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="small container">
+        <small class="text_small small" id="date"></small>
+      </section>
+      <!-- book list section  -->
+      <section id="bookList" class="book-list">
+        <div class="container">
+          <div class="book-list-inner">
+            <h1 class="book-list-title title-2 text-center">Awesome books</h1>
+            <div id="bookListItemsCon"></div>
+          </div>
+        </div>
+      </section>
+      <!-- add book section  -->
+      <section id="addBook" class="add-book hide-section">
+        <div class="container">
+          <div class="add-book-inner">
+            <h2 class="add-book-title title-2 text-center">Add a new book</h2>
+            <form class="add-book-form form" id="addBookForm" method="post">
+              <label id="bookTitleLabel" for="bookTitle" hidden>
+                Book Title
+              </label>
+              <input
+                type="text"
+                id="bookTitle"
+                name="bookTitle"
+                placeholder="Title"
+                required
+              />
+              <label id="bookAuthorLabel" for="bookAuthor" hidden
+                >Book Author</label
+              >
+              <input
+                type="text"
+                id="bookAuthor"
+                name="bookAuthor"
+                placeholder="Author"
+                required
+              />
+              <button class="btn add-book-form-btn" type="submit">Add</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- contact section  -->
+      <section id="contact" class="contact hide-section">
+        <div class="container">
+          <h2 class="contact-title title-2 text-center">Contact Information</h2>
+          <p>Do have any questions or you, just want to say "Hello"?</p>
+          <p>You can reach out to us!</p>
+          <ul>
+            <li><span>E-mail:</span> shahadat3669@gmail.com</li>
+            <li><span>Phone number:</span> +8801690121315</li>
+            <li>
+              <span>Address:</span> 50/A, Agrabad, C/A, Chattogram, Bangladesh
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- footer section  -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="copyright">
+          <p class="copyright-text">
+            Copyright &copy; 2022, All Right Reserved
+            <a href="https://github.com/shahadat3669">Shahadat Hossain</a>
+          </p>
+          <div class="copyright-menu">
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Policy</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./assets/js/index.js"></script>
+    <script></script>
+  </body>
+</html>
