@@ -402,3 +402,49 @@ small,
     border-bottom: 1px solid $red-48;
   }
 }
+
+// add new book
+.add-book {
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    min-width: 400px;
+
+    & input {
+      padding: 16px;
+      transition: all 0.15s ease;
+      vertical-align: middle;
+      border: none;
+      background-color: $gray-93;
+      font-weight: 500;
+      border-radius: 4px;
+      font-size: 16px;
+
+      &::-webkit-input-placeholder {
+        color: $gray-67;
+      }
+
+      &:focus,
+      &:focus-visible {
+        outline-color: $red-68;
+      }
+    }
+
+    &-btn {
+      width: fit-content;
+      align-self: flex-end;
+
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}
